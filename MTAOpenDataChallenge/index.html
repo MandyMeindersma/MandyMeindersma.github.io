@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- maps -->
+    <link rel="preload" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <!-- custom css -->
+    <link rel="preload" href="MTAOpenDataChallenge.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="MTAOpenDataChallenge.css" rel="stylesheet">
+    </noscript>
+
+</head>
+<body>
+
+    <div id="preamble">
+        <h1>
+            How well do you know your East and West? 
+        </h1>
+        <h1>
+            Is point A to the West of point B? or vice versa?
+        </h1>
+        <p>
+            I created this fun view of New York City to show how warped our view of West and East is when we are on the island. 
+        </p>
+        <p>
+            When you are on the island your view of East and West usually lines up with the grid system. 
+            So when you turn the map below to the side a little you can imagine that near <b>the top of the 1/2/3 line (point A) 
+            seems more West than the tip of Manhattan (point B).</b>
+        </p>
+        <p>
+            Now with this map you can see the column divisions trying to visually illustrate what is actually "more West" than something else. 
+            With this view of the map we can see that <b>point B is actually West of Point A.</b>
+        </p>
+        <div id="buttons">
+            <button class="button-1" role="button" id="south">Visualize North + South</button>
+            <button class="button-1 unicorn" role="button" id="unicorn">🦄</button>
+            <button class="button-1" role="button" id="west">Visualize West + East</button>
+        </div>
+    </div>
+    
+
+    <p id="mapTitle">A map with all the entrances and exits of the Subway</p>
+    <div id="map"></div>
+
+    <p id="credit">
+        This was all sparked by the <a href="https://new.mta.info/article/mta-open-data-challenge"> MTA Open Data Challenge</a>
+    </p>
+
+
+    <!-- custom js for maps -->
+    <script type="module" defer src="MTAOpenDataChallenge.js"></script>
+
+</body>
+</html>
