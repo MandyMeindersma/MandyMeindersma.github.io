@@ -60,11 +60,6 @@ span a:hover {
   height: 300px;
 }
 
-header {
-  min-height: 100vh;
-  height: 100vh;
-}
-
 @media (max-width: 768px) {
   header .col-lg-12 .intro-text {
     margin-top: 70px;
