@@ -1,292 +1,670 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Google tag (gtag.js) aka google analytics -->
+    <script
+      defer
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-CK0YN8J8ZB"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-<head>
+      gtag("config", "G-CK0YN8J8ZB");
+    </script>
 
-  <!-- Google tag (gtag.js) aka google analytics -->
-  <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-CK0YN8J8ZB"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Mandy Meindersma's personal website to showcase side projects."
+    />
+    <meta name="author" content="Mandy Meindersma" />
+    <meta name="referrer" content="origin" />
 
-    gtag('config', 'G-CK0YN8J8ZB');
-  </script>
+    <title>Mandy Meindersma</title>
 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Mandy Meindersma's personal website to showcase side projects.">
-  <meta name="author" content="Mandy Meindersma">
-  <meta name="referrer" content="origin">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
 
-  <title>Mandy Meindersma</title>
+    <!-- Preload the image above the fold with a high fetchpriority so it starts loading with the stylesheet. -->
+    <link
+      rel="pre load"
+      fetchpriority="high"
+      as="image"
+      href="https://ik.imagekit.io/mandymeindersma/Mandy.webp"
+      type="image/webp"
+    />
 
-  <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!-- custom css -->
+    <link
+      rel="preload"
+      href="/css/custom.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link href="/css/custom.min.css" rel="stylesheet" />
+    </noscript>
 
-  <!-- Preload the image above the fold with a high fetchpriority so it starts loading with the stylesheet. -->
-  <link rel="pre load" fetchpriority="high" as="image" href="https://ik.imagekit.io/mandymeindersma/Mandy.webp" type="image/webp">
+    <!-- Bootstrap Core CSS -->
+    <link
+      rel="preload"
+      href="/vendor/bootstrap/css/bootstrap.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    </noscript>
 
-  <!-- custom css -->
-  <link rel="preload" href="/css/custom.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link href="/css/custom.min.css" rel="stylesheet">
-  </noscript>
+    <!-- Theme CSS -->
+    <link
+      rel="preload"
+      href="/css/freelancer.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link href="/css/freelancer.min.css" rel="stylesheet" />
+    </noscript>
 
-  <!-- Bootstrap Core CSS -->
-  <link rel="preload" href="/vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  </noscript>
+    <!-- favicon -->
+    <link rel="icon" href="/img/MM.png" />
 
-  <!-- Theme CSS -->
-  <link rel="preload" href="/css/freelancer.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link href="/css/freelancer.min.css" rel="stylesheet">
-  </noscript>
+    <!-- Custom Fonts -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
+        rel="stylesheet"
+        type="text/css"
+      />
+    </noscript>
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&display=swap"
+        rel="stylesheet"
+        type="text/css"
+      />
+    </noscript>
 
-  <!-- favicon -->
-  <link rel="icon" href="/img/MM.png">
+    <!-- maps -->
+    <link
+      rel="preload"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    ></script>
 
-  <!-- Custom Fonts -->
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet" type="text/css">
-  </noscript>
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript>
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&display=swap" rel="stylesheet" type="text/css">
-  </noscript>
+    <!-- lazy load images -->
+    <script src="/js/lazysizes.min.js" async></script>
 
-  <!-- maps -->
-  <link rel="preload" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <!-- Social Tags for sharing-->
+    <meta property="og:title" content="Mandy Meindersma" />
+    <meta
+      property="og:description"
+      content="My personal website to showcase side projects and fun speaking engagements I have done."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.mandymeindersma.com/" />
+    <meta
+      property="og:image"
+      content="https://www.mandymeindersma.com/img/MandySocial.webp"
+    />
+    <meta name="twitter:title" content="Mandy Meindersma" />
+    <meta
+      name="twitter:description"
+      content="My personal website to showcase side projects and fun speaking engagements I have done."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.mandymeindersma.com/img/MandySocial.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
 
-  <!-- lazyload images -->
-  <script src="/js/lazysizes.min.js" async></script>
+  <body>
+    <!-- Navigation -->
+    <nav
+      id="mainNav"
+      class="navbar navbar-default navbar-fixed-top navbar-custom"
+    >
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1"
+          >
+            <span class="sr-only">Toggle navigation</span> Menu
+          </button>
+          <a class="navbar-brand" href="#page-top">Hello World!</a>
+        </div>
 
-  <!-- Social Tags for sharing-->
-  <meta property="og:title" content="Mandy Meindersma" />
-  <meta property="og:description" content="My personal website to showcase side projects and fun speaking engagements I have done." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.mandymeindersma.com/" />
-  <meta property="og:image" content="https://www.mandymeindersma.com/img/MandySocial.webp" />
-  <meta name="twitter:title" content="Mandy Meindersma">
-  <meta name="twitter:description" content="My personal website to showcase side projects and fun speaking engagements I have done.">
-  <meta name="twitter:image" content="https://www.mandymeindersma.com/img/MandySocial.webp">
-  <meta name="twitter:card" content="summary_large_image">
-
-</head>
-
-<body>
-
-  <!-- Navigation -->
-  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header page-scroll">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span> Menu
-        </button>
-        <a class="navbar-brand" href="#page-top">Hello World!</a>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="hidden">
+              <a href="#page-top"></a>
+            </li>
+            <li class="page-scroll">
+              <a href="#portfolio">Portfolio</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#about">About</a>
+            </li>
+            <li class="page-scroll">
+              <a href="#speakerMap">Speaker Map</a>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
       </div>
+      <!-- /.container-fluid -->
+    </nav>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="hidden">
-            <a href="#page-top"></a>
-          </li>
-          <li class="page-scroll">
-            <a href="#portfolio">Portfolio</a>
-          </li>
-          <li class="page-scroll">
-            <a href="#about">About</a>
-          </li>
-          <li class="page-scroll">
-            <a href="#speakerMap">Speaker Map</a>
-          </li>
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container-fluid -->
-  </nav>
-
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <img class="img-responsive" src="https://ik.imagekit.io/mandymeindersma/Mandy.webp" width="300px" height="373px" alt="Head shot of Mandy Meindersma">
-          <div class="intro-text">
-            <span class="name">Mandy Meindersma</span>
-            <hr class="star-light">
-            <span class="skills">Senior Software Engineer - <a href="/Resume/speaker_one_sheet.pdf" target="_blank">Speaker One Sheet</a></span>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <img
+              class="img-responsive"
+              src="https://ik.imagekit.io/mandymeindersma/Mandy.webp"
+              width="300px"
+              height="373px"
+              alt="Head shot of Mandy Meindersma"
+            />
+            <div class="intro-text">
+              <span class="name">Mandy Meindersma</span>
+              <hr class="star-light" />
+              <span class="skills"
+                >Senior Software Engineer -
+                <a href="/Resume/speaker_one_sheet.pdf" target="_blank"
+                  >Speaker One Sheet</a
+                ></span
+              >
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- Portfolio Grid Section -->
-  <section id="portfolio">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2>Portfolio</h2>
-          <hr class="star-primary">
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>Portfolio</h2>
+            <hr class="star-primary" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal25"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy's presentation about Open Source at an AI conference"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/train-stops.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Screenshot of a website"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal24"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy's presentation about Open Source at an AI conference"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/speed-meetup.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Room full of nerds"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal23"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy's presentation about Open Source at an AI conference"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/ghc.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Mandy standing on top of a sign that says GHC"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal22"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy's presentation about Open Source at an AI conference"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/modelling.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Mandy wearing noise cancelling headphones on a plane set"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal21"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy's presentation about Open Source at an AI conference"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/opensource.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Mandy speaking to a group of students and them raising their hands"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal20"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy's presentation to Google Developer Groups about Resumes"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/iwd.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Mandy standing talking into a mic with presentation slides behind her"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal19"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy's involvement with the Dev Edmonton Society"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/des.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="A group of people playing board games in a fancy office"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal18"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy's presentation to university students"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/workshop.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Mandy standing at the front of a large lecture hall with 10 student lining up to talk to her"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal17"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy's fun Jira fire log project"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/fire.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Desktop monitor showing flames and two dancing penguins"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal16"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy's mentoring"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/mentorship.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="A collage of logos including university of alberta, ada's team, technica and hack the north"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal15"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy co-founding Edmonton Women in Tech"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/yegwit.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Three women standing by a trifold that says foster, validate and empower"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal14"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy starting an international hackathon during Covid"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/codevid.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="CODEVID-19 logo"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal13"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy creating a winning Hackathon project at her company"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/buddy.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="A laptop showing a zoom meeting with hardware strewn about"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal12"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy's AI and ML interests"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/amii.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Amii and Alberta Women AI logos"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal11"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy building a rotary phone app"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/phone.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="An old rotary phone with wires sticking out of it connected to a raspberry pi and monitor displaying text"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal10"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy leading the student group ada's team"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/ada's.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Group of women from Ada's Team"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal9"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy's robotics class"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/aria.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Robot making it's way around a racetrack"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal8"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy's Intuit internship"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/intuit.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Mandy in front of a fun office"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal7"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy's Uber project"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/app.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Screenshot of code and screen shot of app homepage"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal6"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy's friends through University"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/group.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Group of university students posing"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal5"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy's first fun project in CS"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/lunar.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Screenshot of code and screen shot of lunar lander rocket"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal4"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy teaching robotics to little girls"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/robogirls.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Collage of summer camp girls, leaders and a robot"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal3"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy's cardiac imaging research"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/svcc.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Mandy standing in front of her research poster"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal2"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy's fun conference experiences"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/girls.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Four ladies sitting on some stairs"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal1"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy's hackathons she likes to do"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/duck.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Three rubber ducks sitting on a blanket"
+              />
+            </a>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal25" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy's presentation about Open Source at an AI conference">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/train-stops.webp" width="360" height="261" class="img-responsive lazyload" alt="Screenshot of a website">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal24" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy's presentation about Open Source at an AI conference">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/speed-meetup.webp" width="360" height="261" class="img-responsive lazyload" alt="Room full of nerds">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal23" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy's presentation about Open Source at an AI conference">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/ghc.webp" width="360" height="261" class="img-responsive lazyload" alt="Mandy standing on top of a sign that says GHC">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal22" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy's presentation about Open Source at an AI conference">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/modelling.webp" width="360" height="261" class="img-responsive lazyload" alt="Mandy wearing noise cancelling headphones on a plane set">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal21" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy's presentation about Open Source at an AI conference">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/opensource.webp" width="360" height="261" class="img-responsive lazyload" alt="Mandy speaking to a group of students and them raising their hands">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal20" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy's presentation to Google Developer Groups about Resumes">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/iwd.webp" width="360" height="261" class="img-responsive lazyload" alt="Mandy standing talking into a mic with presentation slides behind her">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal19" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy's involvement with the Dev Edmonton Society">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/des.webp" width="360" height="261" class="img-responsive lazyload" alt="A group of people playing board games in a fancy office">
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal18" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy's presentation to university students">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/workshop.webp" width="360" height="261" class="img-responsive lazyload" alt="Mandy standing at the front of a large lecture hall with 10 student lining up to talk to her">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal17" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy's fun Jira fire log project">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/fire.webp" width="360" height="261" class="img-responsive lazyload" alt="Desktop monitor showing flames and two dancing penguins">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal16" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy's mentoring">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/mentorship.webp" width="360" height="261" class="img-responsive lazyload" alt="A collage of logos including university of alberta, ada's team, technica and hack the north">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal15" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy co-founding Edmonton Women in Tech">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/yegwit.webp" width="360" height="261" class="img-responsive lazyload" alt="Three women standing by a trifold that says foster, validate and empower">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal14" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy starting an international hackathon during Covid">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/codevid.webp" width="360" height="261" class="img-responsive lazyload" alt="CODEVID-19 logo">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal13" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy creating a winning Hackathon project at her company">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/buddy.webp" width="360" height="261" class="img-responsive lazyload" alt="A laptop showing a zoom meeting with hardware strewn about">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal12" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy's AI and ML interests">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/amii.webp" width="360" height="261" class="img-responsive lazyload" alt="Amii and Alberta Women AI logos">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal11" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy building a rotary phone app">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/phone.webp" width="360" height="261" class="img-responsive lazyload" alt="An old rotary phone with wires sticking out of it connected to a raspberry pi and monitor displaying text">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal10" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy leading the student group ada's team">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/ada's.webp" width="360" height="261" class="img-responsive lazyload" alt="Group of women from Ada's Team">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal9" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy's robotics class">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/aria.webp" width="360" height="261" class="img-responsive lazyload" alt="Robot making it's way around a racetrack">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal8" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy's Intuit internship">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/intuit.webp" width="360" height="261" class="img-responsive lazyload" alt="Mandy in front of a fun office">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal7" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy's Uber project">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/app.webp" width="360" height="261" class="img-responsive lazyload" alt="Screenshot of code and screen shot of app homepage">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy's friends through University">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/group.webp" width="360" height="261" class="img-responsive lazyload" alt="Group of university students posing">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy's first fun project in CS">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/lunar.webp" width="360" height="261" class="img-responsive lazyload" alt="Screenshot of code and screen shot of lunar lander rocket">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy teaching robotics to little girls">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/robogirls.webp" width="360" height="261" class="img-responsive lazyload" alt="Collage of summer camp girls, leaders and a robot">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy's cardiac imaging research">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/svcc.webp" width="360" height="261" class="img-responsive lazyload" alt="Mandy standing in front of her research poster">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy's fun conference experiences">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/girls.webp" width="360" height="261" class="img-responsive lazyload" alt="Four ladies sitting on some stairs">
-          </a>
-        </div>
-        <div class="col-sm-4 portfolio-item">
-          <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal" aria-label="Read more about Mandy's hackathons she likes to do">
-            <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/duck.webp" width="360" height="261" class="img-responsive lazyload" alt="Three rubber ducks sitting on a blanket">
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- About Section -->
-  <section class="success" id="about">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12 text-center">
-          <h2>About</h2>
-          <hr class="star-light">
+    <!-- About Section -->
+    <section class="success" id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2>About</h2>
+            <hr class="star-light" />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 col-lg-offset-2">
+            <p>
+              I love yoga, cats, writing snail-mail letters and puzzles. I like
+              to keep myself busy; usually I am always doing some sort of
+              volunteer work on the side whether it is teaching computer science
+              to kids, trying to inspire other women and minorities in STEM or
+              organizing hackathons. Recently I made an extensive
+              <a
+                href="https://www.canva.com/design/DAEa6SayAhE/IfJ4QOju0qsbHAL2uIsl-w/view?utm_content=DAEa6SayAhE&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink"
+                target="_blank"
+                >resume guide for new grads</a
+              >.
+            </p>
+          </div>
+          <div class="col-lg-4">
+            <p>
+              I also do hardware and IoT projects on the side. My favourite
+              project was rigging up an old rotary phone to call on my cell
+              phone. Most recently I was very honoured to be a Hardware Track
+              Reviewer for the
+              <a href="https://ghc.anitab.org/" target="_blank"
+                >Grace Hopper Celebration</a
+              >. I am looking forward to making an impact with my various
+              technical, mentorship and organizational qualities.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-4 col-lg-offset-2">
-          <p>I love yoga, cats, writing snail-mail letters and puzzles. I like to keep myself busy; usually I am always doing some sort of volunteer work on the side whether it is teaching computer science to kids, trying to inspire other women and minorities in STEM or organizing hackathons. Recently I made an extensive <a href="https://www.canva.com/design/DAEa6SayAhE/IfJ4QOju0qsbHAL2uIsl-w/view?utm_content=DAEa6SayAhE&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink" target="_blank">resume guide for new grads</a>.</p>
-        </div>
-        <div class="col-lg-4">
-          <p>I also do hardware and IoT projects on the side. My favourite project was rigging up an old rotary phone to call on my cell phone. Most recently I was very honoured to be a Hardware Track Reviewer for the <a href="https://ghc.anitab.org/" target="_blank">Grace Hopper Celebration</a>. I am looking forward to making an impact with my various technical, mentorship and organizational qualities.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
     <!-- Speaker Map Section -->
     <section id="speakerMap">
@@ -294,862 +672,1718 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2>Speaker Map</h2>
-            <hr class="star-primary">
+            <hr class="star-primary" />
             <div class="col-lg-8 col-lg-offset-2">
-              <p>This is a map of all the locations I have spoke at and what I spoke about! Shout out to <a href="https://www.linkedin.com/in/courtneyyatteau/" target="_blank">Courtney Yatteau</a> for creating such a fun, interactive workshop that sparked this. I have made speaker profiles on <a href="https://sessionize.com/mandy-meindersma" target="_blank">Sessionize</a>, <a href="https://speakerhub.com/speaker/mandy-meindersma" target="_blank">Speakerhub</a> and <a href="https://speaker.innovationwomen.com/user/17457/" target="_blank">Innovation Women</a> in hopes to do more like this! Check out my <a href="/Resume/speaker_one_sheet.pdf" target="_blank">Speaker One Sheet</a> too!
+              <p>
+                This is a map of all the locations I have spoke at and what I
+                spoke about! Shout out to
+                <a
+                  href="https://www.linkedin.com/in/courtneyyatteau/"
+                  target="_blank"
+                  >Courtney Yatteau</a
+                >
+                for creating such a fun, interactive workshop that sparked this.
+                I have made speaker profiles on
+                <a
+                  href="https://sessionize.com/mandy-meindersma"
+                  target="_blank"
+                  >Sessionize</a
+                >,
+                <a
+                  href="https://speakerhub.com/speaker/mandy-meindersma"
+                  target="_blank"
+                  >Speakerhub</a
+                >
+                and
+                <a
+                  href="https://speaker.innovationwomen.com/user/17457/"
+                  target="_blank"
+                  >Innovation Women</a
+                >
+                in hopes to do more like this! Check out my
+                <a href="/Resume/speaker_one_sheet.pdf" target="_blank"
+                  >Speaker One Sheet</a
+                >
+                too!
               </p>
             </div>
-            <div class="col-lg-8 col-lg-offset-2" id="map">
-            </div>
+            <div class="col-lg-8 col-lg-offset-2" id="map"></div>
           </div>
         </div>
       </div>
     </section>
 
-  <!-- Footer -->
-  <footer class="text-center">
-    <div class="footer-above">
-      <div class="container">
-        <div class="row">
-          <div class="footer-col col-md-4">
-            <h3>Location</h3>
-            <p>New York City, NY</p>
-          </div>
-          <div class="footer-col col-md-4">
-            <h3>Around the Web</h3>
-            <ul class="list-inline">
-              <li>
-                <a href="/Resume/Mandy_Meindersma_Resume_Website.pdf" class="btn-social btn-outline" aria-label="link to my resume">
-                  <svg class="small-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30px" height="30px"> <path fill="#FFFFFF" d="M 6 2 C 4.9 2 4 2.9 4 4 L 4 20 C 4 21.1 4.9 22 6 22 L 18 22 C 19.1 22 20 21.1 20 20 L 20 4 C 20 2.895 19.105 2 18 2 L 6 2 z M 6 4 L 18 4 L 18 20 L 6 20 L 6 4 z M 10.5 5 A 1.5 1.5 0 0 0 9 6.5 A 1.5 1.5 0 0 0 10.5 8 A 1.5 1.5 0 0 0 12 6.5 A 1.5 1.5 0 0 0 10.5 5 z M 10.5 9 C 9.666 9 8 9.419 8 10.25 L 8 11 L 13 11 L 13 10.25 C 13 9.419 11.334 9 10.5 9 z M 8 13 L 8 15 L 16 15 L 16 13 L 8 13 z M 8 16 L 8 18 L 16 18 L 16 16 L 8 16 z"/></svg>
-                </a>
-              </li>
-              <li>
-                <a href="https://devpost.com/MandyMeindersma" class="btn-social btn-outline" aria-label="link to my devpost">
-                  <svg class="small-svg devpost" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="50px" viewBox="-10 -30 280.3 242">
-                  <g id="XMLID_1_">
-                  	<path fill="#FFFFFF" id="XMLID_6_" d="M133.7,76H118v90h14.7c30.9,0,45.1-18.1,45.1-45C177.8,90.9,164.9,76,133.7,76z"/>
-                  	<path fill="#FFFFFF" id="XMLID_9_" d="M210.2,0H70.1L0,121l70.1,121h140.1l70.1-121L210.2,0z M132.7,195H89V47h45.8c42.1,0,73.3,20.1,73.3,74   C208.1,172.8,170.6,195,132.7,195z"/>
-                  </g>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/MandyMeindersma" class="btn-social btn-outline" aria-label="link to my github">
-                  <svg class="small-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px" height="30px"> <path fill="#FFFFFF" d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"/></svg>
-                </a>
-              </li>
-              <li>
-                <a href="https://ca.linkedin.com/in/mandy-meindersma-4067a8113" class="btn-social btn-outline" aria-label="link to my Linkedin">
-                  <svg class="small-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30px" height="30px"><path fill="#FFFFFF" d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z"/></svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="footer-col col-md-4">
-            <h3>Rat Fact</h3>
-            <p><a href="img/rats.png" target="_blank">Here is a map</a> of where rats live. I am from the weird blue shape in Canada :)</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-below">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            Copyright &copy; Mandy Meindersma <span id="year_date"></span>
-          </div>
-          <script defer src="./js/year_date.js"></script>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Portfolio Modals -->
-  <div class="portfolio-modal modal fade" id="portfolioModal25" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>MTA Open Data Challenge</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/train-stops.webp" class="img-responsive img-centered lazyload" alt="Screenshot of a website">
-              <p>The <a href="https://new.mta.info/article/mta-open-data-challenge" target="_blank">MTA Open Data Challenge</a> launched this year and I was able to submit a fun project! I love being a train nerd in New York City. I made a <a href="/MTAOpenDataChallenge">fun site</a> to illustrate a controversial directional question!</p>
-              <ul class="list-inline item-details">
-                <li><b>Number of data points:</b> 2120</li>
-                <li><b>Submitted:</b> Yes!</li>
-                <li><b>Did I win?</b> No :P</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
+    <!-- Footer -->
+    <footer class="text-center">
+      <div class="footer-above">
+        <div class="container">
+          <div class="row">
+            <div class="footer-col col-md-4">
+              <h3>Location</h3>
+              <p>New York City, NY</p>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal24" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>NYC Speed and Performance Meetup</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/speed-meetup.webp" class="img-responsive img-centered lazyload" alt="Room full of nerds">
-              <p>I was able to help organize a meetup at the Dotdash Meredith offices only four months after moving! <a href="https://www.meetup.com/web-performance-ny/events/300790997/" target="_blank">Here</a> is the meetup link for the event! I also helped organize <a href="https://www.meetup.com/dotdash/events/303263291/" target="_blank">this one!</a></p>
-              <ul class="list-inline item-details">
-                <li><b>People Attended:</b> 40</li>
-                <li><b>More coming soon?</b> Yes!</li>
+            <div class="footer-col col-md-4">
+              <h3>Around the Web</h3>
+              <ul class="list-inline">
+                <li>
+                  <a
+                    href="/Resume/Mandy_Meindersma_Resume_Website.pdf"
+                    class="btn-social btn-outline"
+                    aria-label="link to my resume"
+                  >
+                    <svg
+                      class="small-svg"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      width="30px"
+                      height="30px"
+                    >
+                      <path
+                        fill="#FFFFFF"
+                        d="M 6 2 C 4.9 2 4 2.9 4 4 L 4 20 C 4 21.1 4.9 22 6 22 L 18 22 C 19.1 22 20 21.1 20 20 L 20 4 C 20 2.895 19.105 2 18 2 L 6 2 z M 6 4 L 18 4 L 18 20 L 6 20 L 6 4 z M 10.5 5 A 1.5 1.5 0 0 0 9 6.5 A 1.5 1.5 0 0 0 10.5 8 A 1.5 1.5 0 0 0 12 6.5 A 1.5 1.5 0 0 0 10.5 5 z M 10.5 9 C 9.666 9 8 9.419 8 10.25 L 8 11 L 13 11 L 13 10.25 C 13 9.419 11.334 9 10.5 9 z M 8 13 L 8 15 L 16 15 L 16 13 L 8 13 z M 8 16 L 8 18 L 16 18 L 16 16 L 8 16 z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://devpost.com/MandyMeindersma"
+                    class="btn-social btn-outline"
+                    aria-label="link to my devpost"
+                  >
+                    <svg
+                      class="small-svg devpost"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      version="1.1"
+                      id="Layer_1"
+                      x="0px"
+                      y="50px"
+                      viewBox="-10 -30 280.3 242"
+                    >
+                      <g id="XMLID_1_">
+                        <path
+                          fill="#FFFFFF"
+                          id="XMLID_6_"
+                          d="M133.7,76H118v90h14.7c30.9,0,45.1-18.1,45.1-45C177.8,90.9,164.9,76,133.7,76z"
+                        />
+                        <path
+                          fill="#FFFFFF"
+                          id="XMLID_9_"
+                          d="M210.2,0H70.1L0,121l70.1,121h140.1l70.1-121L210.2,0z M132.7,195H89V47h45.8c42.1,0,73.3,20.1,73.3,74   C208.1,172.8,170.6,195,132.7,195z"
+                        />
+                      </g>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/MandyMeindersma"
+                    class="btn-social btn-outline"
+                    aria-label="link to my github"
+                  >
+                    <svg
+                      class="small-svg"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 30 30"
+                      width="30px"
+                      height="30px"
+                    >
+                      <path
+                        fill="#FFFFFF"
+                        d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://ca.linkedin.com/in/mandy-meindersma-4067a8113"
+                    class="btn-social btn-outline"
+                    aria-label="link to my Linkedin"
+                  >
+                    <svg
+                      class="small-svg"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 30 30"
+                      width="30px"
+                      height="30px"
+                    >
+                      <path
+                        fill="#FFFFFF"
+                        d="M9,25H4V10h5V25z M6.501,8C5.118,8,4,6.879,4,5.499S5.12,3,6.501,3C7.879,3,9,4.121,9,5.499C9,6.879,7.879,8,6.501,8z M27,25h-4.807v-7.3c0-1.741-0.033-3.98-2.499-3.98c-2.503,0-2.888,1.896-2.888,3.854V25H12V9.989h4.614v2.051h0.065 c0.642-1.18,2.211-2.424,4.551-2.424c4.87,0,5.77,3.109,5.77,7.151C27,16.767,27,25,27,25z"
+                      />
+                    </svg>
+                  </a>
+                </li>
               </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal23" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>Grace Hopper Celebration: Hardware Session Reviewer</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/ghc.webp" class="img-responsive img-centered lazyload" alt="Mandy standing on top of a sign that says GH">
-              <p>I applied to be a reviewer for the Hardware Track for the Grace Hopper Celebration in 2023 and I got it! It was so cool to be able to review sessions from all around the world, from hardware experts. See me listed with all the volunteers <a href="https://ghc.anitab.org/about/volunteer-appreciation/" target="_blank">here</a>.</p>
-              <ul class="list-inline item-details">
-                <li><b>Proposals reviewed:</b> 7</li>
-                <li><b>Traveled to:</b> Florida</li>
-                <li><b>Got a discount to the conference:</b> Yes!</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal22" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>"Modelling" Gigs</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/modelling.webp" class="img-responsive img-centered lazyload" alt="Mandy wearing noise cancelling headphones on a plane set">
-              <p>I am an official model for People.com 💁‍♀️💁‍♀️ Just kidding hahaha Some times they get "real world" testers and "real world" people to take photos of the products but technically I am getting paid so technically I am a professional model :P See all of my work:</a>
-              <ul class="list-of-modelling">
-                <li>
-                  <a href="https://www.travelandleisure.com/travel-tips/why-you-should-never-take-your-shoes-off-on-a-flight" target="_blank">Travel&Leisure: Taking your shoes off on a flight</a>
-                </li>
-                <li>
-                  <a href="https://www.travelandleisure.com/overhead-bin-rules-to-follow-according-to-flight-attendants-8658839" target="_blank">Travel&Leisure: Overhead bin rules</a>
-                </li>
-                <li>
-                  <a href="https://www.travelandleisure.com/travel-tips/why-you-should-choose-window-seat-during-flu-season" target="_blank">Travel&Leisure: Close the window during flu season</a>
-                </li>
-                <li>
-                  <a href="https://www.travelandleisure.com/airlines-airports/33-ways-to-survive-a-long-flight" target="_blank">Travel&Leisure: Surviving a long flight</a>
-                </li>
-                <li>
-                  <a href="https://people.com/best-heated-jackets-6835907" target="_blank">People: Best heated jackets</a>
-                </li>
-                <li>
-                  <a href="https://people.com/best-work-flats-8728196" target="_blank">People: Best work flats</a>
-                </li>
-                <li>
-                  <a href="https://people.com/most-comfortable-shoes-8664560" target="_blank">People: Most comfortable shoes</a>
-                </li>
-                <li>
-                  <a href="https://people.com/best-flip-flops-for-women-7376831" target="_blank">People: Best flip flops</a>
-                </li>
-                <li>
-                  <a href="https://people.com/best-allbirds-shoes-8750535" target="_blank">People: Best Allbirds</a>
-                </li>
-                <li>
-                  <a href="https://www.verywellfit.com/best-gym-shoes-for-women-4767288" target="_blank">VeryWellFit: Best gym shoes</a>
-                </li>
-              </ul>
+            <div class="footer-col col-md-4">
+              <h3>Rat Fact</h3>
+              <p>
+                <a href="img/rats.png" target="_blank">Here is a map</a> of
+                where rats live. I am from the weird blue shape in Canada :)
               </p>
-              <ul class="list-inline item-details">
-                <li><b>Number of shoots I have done:</b> 14 and counting</li>
-                <li><b>Coolest fake set:</b> Plane, complete with seats and windows</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal21" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>Open Source talk for Amii (Alberta Machine Intelligence Institute)</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/opensource.webp" class="img-responsive img-centered lazyload" alt="Mandy speaking in front of students with their hands raised">
-              <p>Every year Amii (Alberta Machine Intelligence Institute) hosts a conference for student developers in Edmonton called TechAid. I had the pleasure of joining them to chat about how to contribute to open source, how to rock the review process and then how to highlight all of this on your resume. You can see me <a href="https://site.pheedloop.com/event/TechAid2023/speakers" target="_blank">listed in the list of speakers!</a></p>
-              <ul class="list-inline item-details">
-                <li><b>People Attended:</b> 70</li>
-                <li><b>Volunteers heard laugher from outside the room because all of my jokes landed:</b> Yes :P</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
+      <div class="footer-below">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              Copyright &copy; Mandy Meindersma <span id="year_date"></span>
             </div>
+            <script defer src="./js/year_date.js"></script>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal20" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>Speaker for Google Developer Groups</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/iwd.webp" class="img-responsive img-centered lazyload" alt="Mandy standing talking into a mic with presentation slides behind her">
-              <p>The Edmonton chapters of <a href="https://gdg.community.dev/gdg-cloud-edmonton/" target="_blank">Google Developer Group</a>, <a href="https://developers.google.com/womentechmakers" target="_blank">Women Techmakers</a> and <a href="https://www.womeninai.co/canada" target="_blank">Women in AI Canada</a> created an amazing International Women's Day event. They made a call for participation and my resume workshop made the cut! I was able to speak with students and commiserate about how hard it is to put yourself out there to be rejected and gave them some tips to stand out. There is an awesome <a href="https://youtu.be/6NheeRLmOqM" target="_blank">video of me presenting</a> as well!</p>
-              <ul class="list-inline item-details">
-                <li><b>People Attended:</b> 80</li>
-                <li><b>Questions I was asked afterwards:</b> 10</li>
-                <li><b>My first time speaking with a mic:</b> Yes :P</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal19" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>Dev Edmonton Society Board Member</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/des.webp" class="img-responsive img-centered lazyload" alt="A group of people playing board games in a fancy office">
-              <p>I was so excited to be elected to the board because I have been involved as a member of <a href="https://devedmonton.com/" target="_blank">Dev Edmonton</a> since 2019 and I wanted to be able to give back. I was elected as the secretary which means I am in charge of the meeting minutes and keeping track of our paid members. I have also been taking on other responsibilities such as our newsletter, taking code of conduct training, writing our code of conduct incident response plan, and onboarding various meet up groups like the newly formed Junior Developers meet up group. This is a photo of one of our recent networking events. </p>
-              <ul class="list-inline item-details">
-                <li><b>Year I was elected to the board:</b> 2021</li>
-                <li><b>Number of people on the slack:</b> 2400+</li>
-                <li><b>Number of paying members:</b> 35</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal18" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>'Help! What Kind of Dev do I want to be?' Workshop</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/workshop.webp" class="img-responsive img-centered lazyload" alt="Mandy standing at the front of a large lecture hall with 10 student lining up to talk to her">
-              <p>When I was a student I didn't really know many types of developers. I knew that I maybe wanted to be a front end or back end developer but I didn't really know what a day in the life of those developers was like. So I created this workshop which has a website and database filled with bugs. We spend 10 minutes pretending to be a different type of developer, we try to find the bug and we solve it together. Now the students will know what a day in the life of a front end developer, back end developer, security engineer, data engineer, and a dev ops engineer are like. GitHub link to see code and tickets <a href="https://github.com/MandyMeindersma/Presentation-WhatKindOfDevDoIWantToBe" target="_blank">here.</a></p>
-              <ul class="list-inline item-details">
-                <li><b>Number of bugs:</b> 6</li>
-                <li><b>Number of students:</b> 35</li>
-                <li><b>Working on another version:</b> yes!</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal17" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>Jira Fire Log</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/fire.webp" class="img-responsive img-centered lazyload" alt="Desktop monitor showing flames and two dancing penguins">
-              <p>We had a Christmas decorating contest at work. To spice up our cubicle I added a 'Fire log'. I hooked up a Raspberry Pi to poll our Jira board. Anytime our team completed a ticket a flame would be added to the real Fire Log. As we completed more tickets our cubicle became more Christmas-y!</p>
-              <ul class="list-inline item-details">
-                <li><b>Decorating Theme:</b> Glitter AF</li>
-                <li><b>Did we win:</b> No</li>
-                <li><b>Am I still salty about it:</b> Yes :P</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal16" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>Mentorship</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/mentorship.webp" class="img-responsive img-centered lazyload" alt="A collage of logos including university of alberta, ada's team, technica and hack the north">
-              <p>I have been trying to give back more during the pandemic. Meeting with students and helping them through interviews, debugging, projects or hackathons has really helped me connect to people during the pandemic. I have been able to meet with students every two weeks to help them through their year and be a mentor at hackathons which is much more fast paced. My favourite opportunity was to mentor for the <a href="https://www.ai4goodlab.com/" target="_blank">AI4GoodLab</a> which featured teams of women competing in a hackathon, boot camp and final project demo. The group I mentored was <a href="https://www.ai4goodlab.com/news/2021/07/19/11-ambitious-ai-prototypes-for-a-better-world/" target="_blank">the "PhysiFeedback" group</a>. I was also listed on their "AI experts" page: <b>ai4goodlab.com/ai-experts</b>. They have since changed it, but there is still proof in the <a href="https://web.archive.org/web/20210928210017/https://www.ai4goodlab.com/ai-experts" target="_blank">internet archive!</a></p>
-              <ul class="list-inline item-details">
-                <li><b>Hackathons:</b> 2</li>
-                <li><b>Students I meet with weekly:</b> 8</li>
-                <li><b>Number of Resumes reviewed:</b> over 100</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal15" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>YEGWIT - Edmonton Women In Tech</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/yegwit.webp" class="img-responsive img-centered lazyload" alt="Three women standing by a trifold that says foster, validate and empower">
-              <p>I Co-founded YEGWIT in August 2019. YEGWIT aims to build a strong and safe group for women, diverse genders, and allies in tech with the goal of fostering engagement and opportunity, providing mentorship, and creating community. We normally hold brunch event's and have a safe place for people to chat. We have hosted events about being "Brave not Perfect" and mental health during a pandemic.</p>
-              <ul class="list-inline item-details">
-                <li><b>Organizers:</b> 5</li>
-                <li><b>Events held:</b> 4</li>
-                <li><b>Members:</b> ~170</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal14" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>CODEVID-19</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/codevid.webp" class="img-responsive img-centered lazyload" alt="CODEVID-19 logo">
-              <p>In response to the pandemic there were a couple Edmonton developers and I who decided to create the first global pandemic hackathon! With the catchy name CODEVID-19 we set out on our way to finding hackers. Within the first week we had over 1600 participants. We had people from all over the world checking in code. We were on <a href="https://globalnews.ca/news/6801027/codevid-19-hackathon-edmonton-coronavirus/" target="_blank">TV</a> and the <a href="https://www.cbc.ca/news/canada/edmonton/edmonton-programmers-hosting-virtual-covid-19-hackathon-1.5499553" target="_blank">radio</a> too.</p>
-              <ul class="list-inline item-details">
-                <li><b>Participants:</b> 1700+</li>
-                <li><b>Number of countries represented:</b> 40+</li>
-                <li><b>Organizers:</b> ~12</li>
-                <li><b>Number of countries hitting our webiste:</b> 147</li>
-                <li><b>Number of website hits in one day:</b> 9,920</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal13" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>Meeting Buddy</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/buddy.webp" class="img-responsive img-centered lazyload" alt="A laptop showing a zoom meeting with hardware strewn about">
-              <p>At Dotdash Meredith we had an internal hardware hackathon. The challenge was to automate something! There were teams that automated snacks and coffee but our team chose to make meetings a little easier. We made a blinking button that would be placed in the middle of a meeting room. The light would blink various colors to tell you how close you were to the end of your meeting being over. If you pressed the button during the meeting it would also try to book extra time in that meeting room. We had a working prototype in Edmonton and one made by me in New York City!</p>
-              <ul class="list-inline item-details">
-                <li><b>Time to create working prototypes:</b> 12 hours</li>
-                <li><b>Team members:</b> 8</li>
-                <li><b>Did we win?</b> YES</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal12" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>Alberta Women AI Cohort</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/amii.webp" class="img-responsive img-centered lazyload" alt="Amii and Alberta Women AI logos">
-              <p>I was lucky enough to be accepted into the <a href="https://www.amii.ca/training/kickstart/" target="_blank">Alberta Women AI Cohort</a> that was put on by <a href="https://www.amii.ca/" target="_blank">Amii</a>. It has been a great 6 months among 35 other passionate women filled with evening classes on AI, meeting inspirational women in AI, networking with developers in Edmonton and making new friends. I have learnt a lot and become more confident as a minority in STEM. It has really been great. I was even invited back in June 2021 as a panelist to talk about the importance of networking and having a strong community of women.
-              </p>
-              <ul class="list-inline item-details">
-                <li><b>Sessions:</b> February - June 2020</li>
-                <li><b>Companies visited:</b> Improbable, AltaML, PwC, Jobber</li>
-                <li><b>Came back as a panelist:</b> Yes!</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal11" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>Working Rotary Phone</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/phone.webp" class="img-responsive img-centered lazyload" alt="An old rotary phone with wires sticking out of it connected to a raspberry pi and monitor displaying text">
-              <p>I was so excited when my Dad gave me his old rotary phone to play on. I was determined to connect it to my cell phone so I could use the rotary phone to dial and the cell phone to talk. I managed to solder some wires to the rotary phone which connected into the raspberry pi. From there the raspberry pi would read the signals and send that to a database. I would then have an app on my phone that would poll the database for a phone number. It all worked perfectly! Now I can carry my rotary phone with me anywhere to dial on it :P</p>
-              <p><a href="https://github.com/MandyMeindersma/Raspberry-Pi-Scripts/blob/master/rotary-phone.py" target="_blank">Raspberry Pi code</a></p>
-              <p><a href="https://github.com/MandyMeindersma/Rotary-Phone-Flutter-App" target="_blank">Flutter App code</a></p>
-              <p><a href="https://replit.com/@MandyMeindersma/Rotary-Phone#main.py" target="_blank">Backend Server</a></p>
-              <ul class="list-inline item-details">
-                <li><b>Date:</b> February 2020</li>
-                <li><b>months of procrastination:</b> 4</li>
-                <li><b>First time presenting at a meetup?</b> yes!</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal10" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>Ada's Team</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/ada's.webp" class="img-responsive img-centered lazyload" alt="Group of women from Ada's Team">
-              <p>These lovely ladies have been a part of my favourite student group. <a href="https://adasteam.ca/" target="_blank">Ada's Team</a> has helped me find a place in University. It has also taken me to more places than I could ever imagine. We try to send students to a conference every year! In my final year I was lucky enough to be voted in as president. I am so lucky. Also this is the old <a href="https://adas-team.github.io/" target="_blank">website</a> that I managed, much less pretty but more history :P</p>
-              <ul class="list-inline item-details">
-                <li><b>Exec start date:</b> August 2017</li>
-                <li><b>Exec end date:</b> May 2019</li>
-                <li><b>Places I have been:</b> Montreal, Ottawa, Halifax, New
-                  Orleans, Houston, Hawaii</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal9" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>Experimental Mobile Robotics</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/aria.webp" class="img-responsive img-centered lazyload" alt="Robot making it's way around a racetrack">
-              <p> This is my robot for CMPUT 412 - Experimental Mobile Robotics. My friend Michele and I were partners though out this class. We did projects related to self driving cars, image recognition, facial recognition, SLAM and more! <a href="/robotics">This is the website we made for the class</a>.
-              </p>
-              <ul class="list-inline item-details">
-                <li><b>Date:</b> January - April 2018</li>
-                <li><b>Tech used:</b> ROS, python</li>
-                <li><b>Robot Name:</b> ARIA</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>Intuit Internship</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/intuit.webp" class="img-responsive img-centered lazyload" alt="Mandy standing in front of a fun office">
-              <p>I accepted an Software Engineering internship at Intuit in Edmonton, Alberta, Canada as well as Mountainview, California, USA. I was featured in one of their blogs about the interns they had and <a href="https://www.intuit.com/blog/life-at-intuit/theres-so-much-to-learn-a-look-inside-intuits-summer-internship-program/" target="_blank">what they learned that year</a>. I learned so much about Front End development and also about what kind of company culture I want to work in. They really do treat their employees well. 
-              </p>
-              <ul class="list-inline item-details">
-                <li><b>Start Date:</b> January 2017</li>
-                <li><b>End Date:</b> August 2018</li>
-                <li><b>Teams I worked on:</b> 3</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>Carrier</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/app.webp" class="img-responsive img-centered lazyload" alt="Screenshot of code and screen shot of app homepage">
-              <p>This was one of my biggest group projects in University! I worked on this project with the friends in another photo on this website. Our assignment for one of our classes is to make an Uber app! We met every Wednesday to code up a storm! Here is our UML of the project: <a href="https://github.com/MandyMeindersma/Carrier/blob/master/docs/UMLCarrierV4.png" target="_blank">Check it out!</a></p>
-              <ul class="list-inline item-details">
-                <li><b>Date:</b> November 2016</li>
-                <li><b>Total estimated hours worked:</b> 127</li>
-                <li><b>Best project ever:</b> YES</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>Adventures with a Team</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/group.webp" class="img-responsive img-centered lazyload" alt="Group of university students posing">
-              <p>I have been lucky enough to meet these wonderful people at the University of Alberta. We have almost all of our classes together and we have been solving computing problems throughout our undergraduate studies. These are the people that make me smile every day! Left to right: Bennett, Kieter, Mike, Cole, Sarah and myself!
-              </p>
-              <ul class="list-inline item-details">
-                <li><b>Date:</b> September 2016</li>
-                <li><b>Best Class:</b> App development</li>
-                <li><b>Worst Class:</b> Computer Architecture</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>Lunar Lander</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/lunar.webp" class="img-responsive img-centered lazyload" alt="Screenshot of code and screen shot of lunar lander rocket">
-              <p>During my second year of computing science I embarked on the task of creating a Lunar Lander game. Lunar Lander was the first video game that accurately modeled physics laws. The game is all about landing a rocket ship on flat ground while it's oriented properly. I programmed this in C. In addition to programming the game I added many cool features such as a fuel bar, catching bonus stars, a color changing success message and it also blew up if you crashed. This was a very fun project and I loved creating it.</p>
-              <ul class="list-inline item-details">
-                <li><b>Date:</b> December 2015</li>
-                <li><b>Hours taken to code:</b> 32</li>
-                <li><b>Lines coded:</b> 1349</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>Girls in STEM (Science, Technology, Engineering and Math)</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/robogirls.webp" class="img-responsive img-centered lazyload" alt="Collage of summer camp girls, leaders and a robot">
-              <p>Teaching kids science camps through DiscoverE has been a highlight of my undergraduate experience. We teach many camps on many different topics and we also teach all girls camps. We want girls to be more comfortable and interested in STEM (Science, Technology, Engineering and Math). During one week of camp we taught the girls how to build and program Lego Mindstorms. The girls were amazing, they made so many innovative robots! They even made a robot that was 4 foot 6 inches and could walk around!</p>
-              <ul class="list-inline item-details">
-                <li><b>Camp:</b> RoboGirls</li>
-                <li><b>Date:</b> July 2015</li>
-                <li><b>Worked for DiscoverE:</b> 2.5 years</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>Mazankowski Alberta Heart Institute</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/svcc.webp" class="img-responsive img-centered lazyload" alt="Mandy standing in front of her research poster">
-              <p> I accepted a part time job at the Mazankowski Alberta Heart Institute in the <a href="https://spaces.facsci.ualberta.ca/svcc/team/fellows-students/" target="_blank">Servier Virtual Cardiac Centre</a> where I made software that overlays contour lines onto Cardiac Magnetic Resonance Images. I worked to implement the computing of various statistics based on the contours. I even got to present my work at Cardiac Sciences Research Day in Edmonton in 2017.</p>
-              <ul class="list-inline item-details">
-                <li><b>Started:</b> November 2016</li>
-                <li><b>Ended:</b> March 2018</li>
-                <li><b>Presentations I did about my work:</b> 3</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>Canadian Celebration of Women In Computing </h2>
-              <h2>Can-CWIC</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/girls.webp" class="img-responsive img-centered lazyload" alt="Four ladies sitting on some stairs">
-              <p>In 2016 I had the amazing opportunity to be sent to the Canadian Celebration of Women in Computing. This was my first computing conference so I was blow away with the different fields you could go into with computer science and the career paths I could take. They had many presentations to listen to and I found many of my passions in computing science. I know I want to do more work with kids; teaching them to code is so rewarding. I went to this conference again in 2017 and that year I also was one of the <a href="http://fr.can-cwic.ca/beacuteneacutevoles.html" target="_blank">organizers</a>. I organized a lightning talk for one of the conference tracks. I had student applicants send in proposals about things they were working on in tech and afterwards there were judges to give to the best presentation. </p>
-              <ul class="list-inline item-details">
-                <li><b>Date:</b> January 2016</li>
-                <li><b>Location:</b> Ottawa, ON</li>
-                <li><b>Organization:</b> Ada's Team</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-content">
-      <div class="close-modal" data-dismiss="modal">
-        <div class="lr">
-          <div class="rl">
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 col-lg-offset-2">
-            <div class="modal-body">
-              <h2>Rubber Duck Debuggers</h2>
-              <hr class="star-primary">
-              <img data-src="https://ik.imagekit.io/mandymeindersma/portfolio/duck.webp" class="img-responsive img-centered lazyload" alt="Three rubber ducks sitting on a blanket">
-              <p>Rubber Duck Debuggers is the team name my friend Michael and I use for when we do programming contests. We have only done local contests but they are always a lot of fun. There is a programming club that meets every Friday which we try to attend regularly! YES, we do carry our rubber ducks around with us EVERYWHERE. Go Rubber Duck Debuggers!</p>
-              <ul class="list-inline item-details">
-                <li><b>Contests we have done together:</b> 4</li>
-                <li><b>Contests I have hosted:</b> 1</li>
-              </ul>
-              <br>
-              <button type="button" class="btn btn-default" data-dismiss="modal"> Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    </footer>
 
-  <!-- jQuery -->
-  <script defer src="vendor/jquery/jquery.min.js"></script>
+    <!-- Portfolio Modals -->
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal25"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>MTA Open Data Challenge</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/train-stops.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Screenshot of a website"
+                />
+                <p>
+                  The
+                  <a
+                    href="https://new.mta.info/article/mta-open-data-challenge"
+                    target="_blank"
+                    >MTA Open Data Challenge</a
+                  >
+                  launched this year and I was able to submit a fun project! I
+                  love being a train nerd in New York City. I made a
+                  <a href="/MTAOpenDataChallenge">fun site</a> to illustrate a
+                  controversial directional question!
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Number of data points:</b> 2120</li>
+                  <li><b>Submitted:</b> Yes!</li>
+                  <li><b>Did I win?</b> No :P</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal24"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>NYC Speed and Performance Meetup</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/speed-meetup.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Room full of nerds"
+                />
+                <p>
+                  I was able to help organize a meetup at the Dotdash Meredith
+                  offices only four months after moving!
+                  <a
+                    href="https://www.meetup.com/web-performance-ny/events/300790997/"
+                    target="_blank"
+                    >Here</a
+                  >
+                  is the meetup link for the event! I also helped organize
+                  <a
+                    href="https://www.meetup.com/dotdash/events/303263291/"
+                    target="_blank"
+                    >this one!</a
+                  >
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>People Attended:</b> 40</li>
+                  <li><b>More coming soon?</b> Yes!</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal23"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>Grace Hopper Celebration: Hardware Session Reviewer</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/ghc.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Mandy standing on top of a sign that says GH"
+                />
+                <p>
+                  I applied to be a reviewer for the Hardware Track for the
+                  Grace Hopper Celebration in 2023 and I got it! It was so cool
+                  to be able to review sessions from all around the world, from
+                  hardware experts. See me listed with all the volunteers
+                  <a
+                    href="https://ghc.anitab.org/about/volunteer-appreciation/"
+                    target="_blank"
+                    >here</a
+                  >.
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Proposals reviewed:</b> 7</li>
+                  <li><b>Traveled to:</b> Florida</li>
+                  <li><b>Got a discount to the conference:</b> Yes!</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal22"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>"Modelling" Gigs</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/modelling.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Mandy wearing noise cancelling headphones on a plane set"
+                />
+                <p>
+                  I am an official model for People.com 💁‍♀️💁‍♀️ Just kidding hahaha
+                  Some times they get "real world" testers and "real world"
+                  people to take photos of the products but technically I am
+                  getting paid so technically I am a professional model :P See
+                  all of my work:
+                </p>
+                <ul class="list-of-modelling">
+                  <li>
+                    <a
+                      href="https://www.travelandleisure.com/travel-tips/why-you-should-never-take-your-shoes-off-on-a-flight"
+                      target="_blank"
+                      >Travel&Leisure: Taking your shoes off on a flight</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.travelandleisure.com/overhead-bin-rules-to-follow-according-to-flight-attendants-8658839"
+                      target="_blank"
+                      >Travel&Leisure: Overhead bin rules</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.travelandleisure.com/travel-tips/why-you-should-choose-window-seat-during-flu-season"
+                      target="_blank"
+                      >Travel&Leisure: Close the window during flu season</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.travelandleisure.com/airlines-airports/33-ways-to-survive-a-long-flight"
+                      target="_blank"
+                      >Travel&Leisure: Surviving a long flight</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://people.com/best-heated-jackets-6835907"
+                      target="_blank"
+                      >People: Best heated jackets</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://people.com/best-work-flats-8728196"
+                      target="_blank"
+                      >People: Best work flats</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://people.com/most-comfortable-shoes-8664560"
+                      target="_blank"
+                      >People: Most comfortable shoes</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://people.com/best-flip-flops-for-women-7376831"
+                      target="_blank"
+                      >People: Best flip flops</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://people.com/best-allbirds-shoes-8750535"
+                      target="_blank"
+                      >People: Best Allbirds</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.verywellfit.com/best-gym-shoes-for-women-4767288"
+                      target="_blank"
+                      >VeryWellFit: Best gym shoes</a
+                    >
+                  </li>
+                </ul>
+                <ul class="list-inline item-details">
+                  <li><b>Number of shoots I have done:</b> 14 and counting</li>
+                  <li>
+                    <b>Coolest fake set:</b> Plane, complete with seats and
+                    windows
+                  </li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal21"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>
+                  Open Source talk for Amii (Alberta Machine Intelligence
+                  Institute)
+                </h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/opensource.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Mandy speaking in front of students with their hands raised"
+                />
+                <p>
+                  Every year Amii (Alberta Machine Intelligence Institute) hosts
+                  a conference for student developers in Edmonton called
+                  TechAid. I had the pleasure of joining them to chat about how
+                  to contribute to open source, how to rock the review process
+                  and then how to highlight all of this on your resume. You can
+                  see me
+                  <a
+                    href="https://site.pheedloop.com/event/TechAid2023/speakers"
+                    target="_blank"
+                    >listed in the list of speakers!</a
+                  >
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>People Attended:</b> 70</li>
+                  <li>
+                    <b
+                      >Volunteers heard laugher from outside the room because
+                      all of my jokes landed:</b
+                    >
+                    Yes :P
+                  </li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal20"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>Speaker for Google Developer Groups</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/iwd.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Mandy standing talking into a mic with presentation slides behind her"
+                />
+                <p>
+                  The Edmonton chapters of
+                  <a
+                    href="https://gdg.community.dev/gdg-cloud-edmonton/"
+                    target="_blank"
+                    >Google Developer Group</a
+                  >,
+                  <a
+                    href="https://developers.google.com/womentechmakers"
+                    target="_blank"
+                    >Women Techmakers</a
+                  >
+                  and
+                  <a href="https://www.womeninai.co/canada" target="_blank"
+                    >Women in AI Canada</a
+                  >
+                  created an amazing International Women's Day event. They made
+                  a call for participation and my resume workshop made the cut!
+                  I was able to speak with students and commiserate about how
+                  hard it is to put yourself out there to be rejected and gave
+                  them some tips to stand out. There is an awesome
+                  <a href="https://youtu.be/6NheeRLmOqM" target="_blank"
+                    >video of me presenting</a
+                  >
+                  as well!
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>People Attended:</b> 80</li>
+                  <li><b>Questions I was asked afterwards:</b> 10</li>
+                  <li><b>My first time speaking with a mic:</b> Yes :P</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal19"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>Dev Edmonton Society Board Member</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/des.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="A group of people playing board games in a fancy office"
+                />
+                <p>
+                  I was so excited to be elected to the board because I have
+                  been involved as a member of
+                  <a href="https://devedmonton.com/" target="_blank"
+                    >Dev Edmonton</a
+                  >
+                  since 2019 and I wanted to be able to give back. I was elected
+                  as the secretary which means I am in charge of the meeting
+                  minutes and keeping track of our paid members. I have also
+                  been taking on other responsibilities such as our newsletter,
+                  taking code of conduct training, writing our code of conduct
+                  incident response plan, and onboarding various meet up groups
+                  like the newly formed Junior Developers meet up group. This is
+                  a photo of one of our recent networking events.
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Year I was elected to the board:</b> 2021</li>
+                  <li><b>Number of people on the slack:</b> 2400+</li>
+                  <li><b>Number of paying members:</b> 35</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal18"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>'Help! What Kind of Dev do I want to be?' Workshop</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/workshop.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Mandy standing at the front of a large lecture hall with 10 student lining up to talk to her"
+                />
+                <p>
+                  When I was a student I didn't really know many types of
+                  developers. I knew that I maybe wanted to be a front end or
+                  back end developer but I didn't really know what a day in the
+                  life of those developers was like. So I created this workshop
+                  which has a website and database filled with bugs. We spend 10
+                  minutes pretending to be a different type of developer, we try
+                  to find the bug and we solve it together. Now the students
+                  will know what a day in the life of a front end developer,
+                  back end developer, security engineer, data engineer, and a
+                  dev ops engineer are like. GitHub link to see code and tickets
+                  <a
+                    href="https://github.com/MandyMeindersma/Presentation-WhatKindOfDevDoIWantToBe"
+                    target="_blank"
+                    >here.</a
+                  >
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Number of bugs:</b> 6</li>
+                  <li><b>Number of students:</b> 35</li>
+                  <li><b>Working on another version:</b> yes!</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal17"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>Jira Fire Log</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/fire.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Desktop monitor showing flames and two dancing penguins"
+                />
+                <p>
+                  We had a Christmas decorating contest at work. To spice up our
+                  cubicle I added a 'Fire log'. I hooked up a Raspberry Pi to
+                  poll our Jira board. Anytime our team completed a ticket a
+                  flame would be added to the real Fire Log. As we completed
+                  more tickets our cubicle became more Christmas-y!
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Decorating Theme:</b> Glitter AF</li>
+                  <li><b>Did we win:</b> No</li>
+                  <li><b>Am I still salty about it:</b> Yes :P</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal16"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>Mentorship</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/mentorship.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="A collage of logos including university of alberta, ada's team, Technica and hack the north"
+                />
+                <p>
+                  I have been trying to give back more during the pandemic.
+                  Meeting with students and helping them through interviews,
+                  debugging, projects or hackathons has really helped me connect
+                  to people during the pandemic. I have been able to meet with
+                  students every two weeks to help them through their year and
+                  be a mentor at hackathons which is much more fast paced. My
+                  favourite opportunity was to mentor for the
+                  <a href="https://www.ai4goodlab.com/" target="_blank"
+                    >AI4GoodLab</a
+                  >
+                  which featured teams of women competing in a hackathon, boot
+                  camp and final project demo. The group I mentored was
+                  <a
+                    href="https://www.ai4goodlab.com/news/2021/07/19/11-ambitious-ai-prototypes-for-a-better-world/"
+                    target="_blank"
+                    >the "PhysiFeedback" group</a
+                  >. I was also listed on their "AI experts" page:
+                  <b>ai4goodlab.com/ai-experts</b>. They have since changed it,
+                  but there is still proof in the
+                  <a
+                    href="https://web.archive.org/web/20210928210017/https://www.ai4goodlab.com/ai-experts"
+                    target="_blank"
+                    >internet archive!</a
+                  >
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Hackathons:</b> 2</li>
+                  <li><b>Students I meet with weekly:</b> 8</li>
+                  <li><b>Number of Resumes reviewed:</b> over 100</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal15"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>YEGWIT - Edmonton Women In Tech</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/yegwit.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Three women standing by a trifold that says foster, validate and empower"
+                />
+                <p>
+                  I Co-founded YEGWIT in August 2019. YEGWIT aims to build a
+                  strong and safe group for women, diverse genders, and allies
+                  in tech with the goal of fostering engagement and opportunity,
+                  providing mentorship, and creating community. We normally hold
+                  brunch event's and have a safe place for people to chat. We
+                  have hosted events about being "Brave not Perfect" and mental
+                  health during a pandemic.
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Organizers:</b> 5</li>
+                  <li><b>Events held:</b> 4</li>
+                  <li><b>Members:</b> ~170</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal14"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>CODEVID-19</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/codevid.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="CODEVID-19 logo"
+                />
+                <p>
+                  In response to the pandemic there were a couple Edmonton
+                  developers and I who decided to create the first global
+                  pandemic hackathon! With the catchy name CODEVID-19 we set out
+                  on our way to finding hackers. Within the first week we had
+                  over 1600 participants. We had people from all over the world
+                  checking in code. We were on
+                  <a
+                    href="https://globalnews.ca/news/6801027/codevid-19-hackathon-edmonton-coronavirus/"
+                    target="_blank"
+                    >TV</a
+                  >
+                  and the
+                  <a
+                    href="https://www.cbc.ca/news/canada/edmonton/edmonton-programmers-hosting-virtual-covid-19-hackathon-1.5499553"
+                    target="_blank"
+                    >radio</a
+                  >
+                  too.
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Participants:</b> 1700+</li>
+                  <li><b>Number of countries represented:</b> 40+</li>
+                  <li><b>Organizers:</b> ~12</li>
+                  <li><b>Number of countries hitting our website:</b> 147</li>
+                  <li><b>Number of website hits in one day:</b> 9,920</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal13"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>Meeting Buddy</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/buddy.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="A laptop showing a zoom meeting with hardware strewn about"
+                />
+                <p>
+                  At Dotdash Meredith we had an internal hardware hackathon. The
+                  challenge was to automate something! There were teams that
+                  automated snacks and coffee but our team chose to make
+                  meetings a little easier. We made a blinking button that would
+                  be placed in the middle of a meeting room. The light would
+                  blink various colors to tell you how close you were to the end
+                  of your meeting being over. If you pressed the button during
+                  the meeting it would also try to book extra time in that
+                  meeting room. We had a working prototype in Edmonton and one
+                  made by me in New York City!
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Time to create working prototypes:</b> 12 hours</li>
+                  <li><b>Team members:</b> 8</li>
+                  <li><b>Did we win?</b> YES</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal12"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>Alberta Women AI Cohort</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/amii.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Amii and Alberta Women AI logos"
+                />
+                <p>
+                  I was lucky enough to be accepted into the
+                  <a
+                    href="https://www.amii.ca/training/kickstart/"
+                    target="_blank"
+                    >Alberta Women AI Cohort</a
+                  >
+                  that was put on by
+                  <a href="https://www.amii.ca/" target="_blank">Amii</a>. It
+                  has been a great 6 months among 35 other passionate women
+                  filled with evening classes on AI, meeting inspirational women
+                  in AI, networking with developers in Edmonton and making new
+                  friends. I have learnt a lot and become more confident as a
+                  minority in STEM. It has really been great. I was even invited
+                  back in June 2021 as a panelist to talk about the importance
+                  of networking and having a strong community of women.
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Sessions:</b> February - June 2020</li>
+                  <li>
+                    <b>Companies visited:</b> Improbable, AltaML, PwC, Jobber
+                  </li>
+                  <li><b>Came back as a panelist:</b> Yes!</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal11"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>Working Rotary Phone</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/phone.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="An old rotary phone with wires sticking out of it connected to a raspberry pi and monitor displaying text"
+                />
+                <p>
+                  I was so excited when my Dad gave me his old rotary phone to
+                  play on. I was determined to connect it to my cell phone so I
+                  could use the rotary phone to dial and the cell phone to talk.
+                  I managed to solder some wires to the rotary phone which
+                  connected into the raspberry pi. From there the raspberry pi
+                  would read the signals and send that to a database. I would
+                  then have an app on my phone that would poll the database for
+                  a phone number. It all worked perfectly! Now I can carry my
+                  rotary phone with me anywhere to dial on it :P
+                </p>
+                <p>
+                  <a
+                    href="https://github.com/MandyMeindersma/Raspberry-Pi-Scripts/blob/master/rotary-phone.py"
+                    target="_blank"
+                    >Raspberry Pi code</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="https://github.com/MandyMeindersma/Rotary-Phone-Flutter-App"
+                    target="_blank"
+                    >Flutter App code</a
+                  >
+                </p>
+                <p>
+                  <a
+                    href="https://replit.com/@MandyMeindersma/Rotary-Phone#main.py"
+                    target="_blank"
+                    >Backend Server</a
+                  >
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Date:</b> February 2020</li>
+                  <li><b>months of procrastination:</b> 4</li>
+                  <li><b>First time presenting at a meetup?</b> yes!</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal10"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>Ada's Team</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/ada's.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Group of women from Ada's Team"
+                />
+                <p>
+                  These lovely ladies have been a part of my favourite student
+                  group.
+                  <a href="https://adasteam.ca/" target="_blank">Ada's Team</a>
+                  has helped me find a place in University. It has also taken me
+                  to more places than I could ever imagine. We try to send
+                  students to a conference every year! In my final year I was
+                  lucky enough to be voted in as president. I am so lucky. Also
+                  this is the old
+                  <a href="https://adas-team.github.io/" target="_blank"
+                    >website</a
+                  >
+                  that I managed, much less pretty but more history :P
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Exec start date:</b> August 2017</li>
+                  <li><b>Exec end date:</b> May 2019</li>
+                  <li>
+                    <b>Places I have been:</b> Montreal, Ottawa, Halifax, New
+                    Orleans, Houston, Hawaii
+                  </li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal9"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>Experimental Mobile Robotics</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/aria.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Robot making it's way around a racetrack"
+                />
+                <p>
+                  This is my robot for CMPUT 412 - Experimental Mobile Robotics.
+                  My friend Michele and I were partners though out this class.
+                  We did projects related to self driving cars, image
+                  recognition, facial recognition, SLAM and more!
+                  <a href="/robotics"
+                    >This is the website we made for the class</a
+                  >.
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Date:</b> January - April 2018</li>
+                  <li><b>Tech used:</b> ROS, python</li>
+                  <li><b>Robot Name:</b> ARIA</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal8"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>Intuit Internship</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/intuit.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Mandy standing in front of a fun office"
+                />
+                <p>
+                  I accepted an Software Engineering internship at Intuit in
+                  Edmonton, Alberta, Canada as well as Mountainview, California,
+                  USA. I was featured in one of their blogs about the interns
+                  they had and
+                  <a
+                    href="https://www.intuit.com/blog/life-at-intuit/theres-so-much-to-learn-a-look-inside-intuits-summer-internship-program/"
+                    target="_blank"
+                    >what they learned that year</a
+                  >. I learned so much about Front End development and also
+                  about what kind of company culture I want to work in. They
+                  really do treat their employees well.
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Start Date:</b> January 2017</li>
+                  <li><b>End Date:</b> August 2018</li>
+                  <li><b>Teams I worked on:</b> 3</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal7"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>Carrier</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/app.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Screenshot of code and screen shot of app homepage"
+                />
+                <p>
+                  This was one of my biggest group projects in University! I
+                  worked on this project with the friends in another photo on
+                  this website. Our assignment for one of our classes is to make
+                  an Uber app! We met every Wednesday to code up a storm! Here
+                  is our UML of the project:
+                  <a
+                    href="https://github.com/MandyMeindersma/Carrier/blob/master/docs/UMLCarrierV4.png"
+                    target="_blank"
+                    >Check it out!</a
+                  >
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Date:</b> November 2016</li>
+                  <li><b>Total estimated hours worked:</b> 127</li>
+                  <li><b>Best project ever:</b> YES</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal6"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>Adventures with a Team</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/group.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Group of university students posing"
+                />
+                <p>
+                  I have been lucky enough to meet these wonderful people at the
+                  University of Alberta. We have almost all of our classes
+                  together and we have been solving computing problems
+                  throughout our undergraduate studies. These are the people
+                  that make me smile every day! Left to right: Bennett, Kieter,
+                  Mike, Cole, Sarah and myself!
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Date:</b> September 2016</li>
+                  <li><b>Best Class:</b> App development</li>
+                  <li><b>Worst Class:</b> Computer Architecture</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal5"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>Lunar Lander</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/lunar.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Screenshot of code and screen shot of lunar lander rocket"
+                />
+                <p>
+                  During my second year of computing science I embarked on the
+                  task of creating a Lunar Lander game. Lunar Lander was the
+                  first video game that accurately modeled physics laws. The
+                  game is all about landing a rocket ship on flat ground while
+                  it's oriented properly. I programmed this in C. In addition to
+                  programming the game I added many cool features such as a fuel
+                  bar, catching bonus stars, a color changing success message
+                  and it also blew up if you crashed. This was a very fun
+                  project and I loved creating it.
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Date:</b> December 2015</li>
+                  <li><b>Hours taken to code:</b> 32</li>
+                  <li><b>Lines coded:</b> 1349</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal4"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>
+                  Girls in STEM (Science, Technology, Engineering and Math)
+                </h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/robogirls.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Collage of summer camp girls, leaders and a robot"
+                />
+                <p>
+                  Teaching kids science camps through DiscoverE has been a
+                  highlight of my undergraduate experience. We teach many camps
+                  on many different topics and we also teach all girls camps. We
+                  want girls to be more comfortable and interested in STEM
+                  (Science, Technology, Engineering and Math). During one week
+                  of camp we taught the girls how to build and program Lego
+                  Mindstorms. The girls were amazing, they made so many
+                  innovative robots! They even made a robot that was 4 foot 6
+                  inches and could walk around!
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Camp:</b> RoboGirls</li>
+                  <li><b>Date:</b> July 2015</li>
+                  <li><b>Worked for DiscoverE:</b> 2.5 years</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal3"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>Mazankowski Alberta Heart Institute</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/svcc.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Mandy standing in front of her research poster"
+                />
+                <p>
+                  I accepted a part time job at the Mazankowski Alberta Heart
+                  Institute in the
+                  <a
+                    href="https://spaces.facsci.ualberta.ca/svcc/team/fellows-students/"
+                    target="_blank"
+                    >Servier Virtual Cardiac Centre</a
+                  >
+                  where I made software that overlays contour lines onto Cardiac
+                  Magnetic Resonance Images. I worked to implement the computing
+                  of various statistics based on the contours. I even got to
+                  present my work at Cardiac Sciences Research Day in Edmonton
+                  in 2017.
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Started:</b> November 2016</li>
+                  <li><b>Ended:</b> March 2018</li>
+                  <li><b>Presentations I did about my work:</b> 3</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal2"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>Canadian Celebration of Women In Computing</h2>
+                <h2>Can-CWIC</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/girls.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Four ladies sitting on some stairs"
+                />
+                <p>
+                  In 2016 I had the amazing opportunity to be sent to the
+                  Canadian Celebration of Women in Computing. This was my first
+                  computing conference so I was blow away with the different
+                  fields you could go into with computer science and the career
+                  paths I could take. They had many presentations to listen to
+                  and I found many of my passions in computing science. I know I
+                  want to do more work with kids; teaching them to code is so
+                  rewarding. I went to this conference again in 2017 and that
+                  year I also was one of the
+                  <a
+                    href="http://fr.can-cwic.ca/beacuteneacutevoles.html"
+                    target="_blank"
+                    >organizers</a
+                  >. I organized a lightning talk for one of the conference
+                  tracks. I had student applicants send in proposals about
+                  things they were working on in tech and afterwards there were
+                  judges to give to the best presentation.
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Date:</b> January 2016</li>
+                  <li><b>Location:</b> Ottawa, ON</li>
+                  <li><b>Organization:</b> Ada's Team</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal1"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>Rubber Duck Debuggers</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/duck.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Three rubber ducks sitting on a blanket"
+                />
+                <p>
+                  Rubber Duck Debuggers is the team name my friend Michael and I
+                  use for when we do programming contests. We have only done
+                  local contests but they are always a lot of fun. There is a
+                  programming club that meets every Friday which we try to
+                  attend regularly! YES, we do carry our rubber ducks around
+                  with us EVERYWHERE. Go Rubber Duck Debuggers!
+                </p>
+                <ul class="list-inline item-details">
+                  <li><b>Contests we have done together:</b> 4</li>
+                  <li><b>Contests I have hosted:</b> 1</li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <!-- custom js -->
-  <script defer src="js/collapse_logic.js"></script>
+    <!-- jQuery -->
+    <script defer src="vendor/jquery/jquery.min.js"></script>
 
-  <!-- custom js for maps -->
-  <script defer src="js/maps.js"></script>
+    <!-- custom js -->
+    <script defer src="js/collapse_logic.js"></script>
 
-  <!-- Bootstrap Core JavaScript -->
-  <script defer src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- custom js for maps -->
+    <script defer src="js/maps.js"></script>
 
-  <!-- Plugin JavaScript -->
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js">
-  </script>
+    <!-- Bootstrap Core JavaScript -->
+    <script defer src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-  <!-- Theme JavaScript -->
-  <script defer src="js/freelancer.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"
+    ></script>
 
-</body>
-
+    <!-- Theme JavaScript -->
+    <script defer src="js/freelancer.min.js"></script>
+  </body>
 </html>
