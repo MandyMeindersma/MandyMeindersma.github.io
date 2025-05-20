@@ -1,7 +1,7 @@
 Hello! This is my personal webpage. I first made this in my second year of university. I got a theme from bootstrap and have been editing it ever since.
 
 ### Lighthouse:
-My Google lighthouse performance, accessibility and SEO (search engine optimization) scores *used to* be pretty great (all over 97) but then they included Largest Contentful Paint and Cumulative Layout Shift in the metrics and I can't figure out how to fix the things :P. Everything else is at 100 though.
+My Google lighthouse performance, accessibility and SEO (search engine optimization) scores *used to* be pretty great (all over 97) but then they included Largest Contentful Paint and Cumulative Layout Shift in the metrics and I can't figure out how to fix the things :P.
 
 ### Development:
 * npm install gulp-cli -g
