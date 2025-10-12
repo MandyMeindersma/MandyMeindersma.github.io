@@ -1,6 +1,8 @@
 const center = [41.615791, -116.201579]
 const map = L.map("map").setView(center, 3); //[latitude, longitude], zoom
 
+// use this to get long and lat: https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates?f=pjson&outFields=*&singleLine=address
+
 const EdmontonAmiiKickstart = [53.540641606571, -113.492931031386];
 const EdmontonGDGIWD = [53.540641606571, -113.492];
 const EdmontonAdasTeam = [53.522907, -113.525537];
@@ -11,6 +13,9 @@ const HawaiiAAAI = [21.2826687, -157.8385384];
 const NewYorkCunyTechPrep = [40.743218055341, -74.009053862658];
 const NewYorkCunyTechPrepAmazon = [40.751888212167, -73.983248329714];
 const NewYorkBreakThroughTechPrep = [40.756137166524, -73.956088029759];
+const NewYorkTechFutures= [40.706548234777, -74.003252579832];
+const NewYorkPeopleInc= [40.711571, -74.015342];
+const NewYorkWorldTraceCenter= [40.712755872269, -74.01329720114];
 const MontrealCANCWIC = [45.4980116, -73.5714769];
 const HalifaxCANCWIC = [44.646589311141, -63.574683192919];
 const NewOrleansAAAI = [29.9475306, -90.0635043];
@@ -66,9 +71,11 @@ const EdmontonAmiiMarker = L.marker(EdmontonAmii, {icon: micIcon})
                             .addTo(map)
                             .bindPopup(stylePopup('<a href="https://site.pheedloop.com/event/TechAid2023/speakers" target="_blank">Alberta Machine Intelligence Institute Conference</a> on Open Source'));
 
-const HawaiiAAAIMarker = L.marker(HawaiiAAAI, {icon: micIcon})
-                            .addTo(map)
-                            .bindPopup(stylePopup('<a href="https://aaai.org/" target="_blank">Association for the Advancement of Artificial Intelligence</a> on Robotics'));
+
+
+
+
+
 
 const NewYorkCunyTechPrepMarker = L.marker(NewYorkCunyTechPrep, {icon: micIcon})
                             .addTo(map)
@@ -81,6 +88,23 @@ const NewYorkCunyTechPrepAmazonMarker = L.marker(NewYorkCunyTechPrepAmazon, {ico
 const NewYorkBreakThroughTechPrepMarker = L.marker(NewYorkBreakThroughTechPrep, {icon: micIcon})
                             .addTo(map)
                             .bindPopup(stylePopup('<a href="https://www.breakthroughtech.org/" target="_blank">Break Through Tech Prep</a> on Nailing a Technical Interview'));
+
+const NewYorkTechFuturesMarker = L.marker(NewYorkTechFutures, {icon: micIcon})
+                            .addTo(map)
+                            .bindPopup(stylePopup('<a href="https://events.techfutures.com/2025/agenda/session/1733721" target="_blank">Tech Futures</a> on Engineering High-Density IoT'));
+
+const NewYorkPeopleIncMarker = L.marker(NewYorkPeopleInc, {icon: micIcon})
+                            .addTo(map)
+                            .bindPopup(stylePopup('<a href="https://www.meetup.com/peopleinc/events/310731650" target="_blank">People Inc.</a> on Java 25'));
+
+const NewYorkWorldTradeCenterMarker = L.marker(NewYorkWorldTraceCenter, {icon: micIcon})
+                            .addTo(map)
+                            .bindPopup(stylePopup('<a href="https://www.eventbrite.com/e/tinker-talk-breadboarding-human-robot-interaction-talk-networking-tickets-1486262564339" target="_blank">Robotics Workshop</a> on Breadboarding'));
+
+
+
+
+
 
 const MontrealCANCWICMarker = L.marker(MontrealCANCWIC, {icon: micIcon})
                             .addTo(map)
@@ -102,6 +126,9 @@ const LakeLouiseNEWMarker = L.marker(LakeLouiseNEW, {icon: micIcon})
                             .addTo(map)
                             .bindPopup(stylePopup('<a href="https://www.networkofempoweredwomen.ca/" target="_blank">Network of Empowered Women</a> on my winning case study'));
 
+const HawaiiAAAIMarker = L.marker(HawaiiAAAI, {icon: micIcon})
+                            .addTo(map)
+                            .bindPopup(stylePopup('<a href="https://aaai.org/" target="_blank">Association for the Advancement of Artificial Intelligence</a> on Robotics'));
 
 
 
