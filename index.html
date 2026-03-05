@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <!-- Google tag (gtag.js) aka google analytics -->
@@ -45,7 +45,10 @@
       rel="preload"
       href="/css/custom.min.css"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript>
       <link href="/css/custom.min.css" rel="stylesheet" />
@@ -56,7 +59,10 @@
       rel="preload"
       href="/vendor/bootstrap/css/bootstrap.min.css"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript>
       <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -67,7 +73,10 @@
       rel="preload"
       href="/css/freelancer.min.css"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript>
       <link href="/css/freelancer.min.css" rel="stylesheet" />
@@ -81,7 +90,10 @@
       rel="preload"
       href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript>
       <link
@@ -94,7 +106,10 @@
       rel="preload"
       href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&display=swap"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <noscript>
       <link
@@ -109,7 +124,10 @@
       rel="preload"
       href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
+      onload="
+        this.onload = null;
+        this.rel = 'stylesheet';
+      "
     />
     <script
       defer
@@ -222,6 +240,22 @@
           </div>
         </div>
         <div class="row">
+          <div class="col-sm-4 portfolio-item">
+            <a
+              href="#portfolioModal34"
+              class="portfolio-link"
+              data-toggle="modal"
+              aria-label="Read more about Mandy speaking at coffee and code NYC"
+            >
+              <img
+                data-src="https://ik.imagekit.io/mandymeindersma/portfolio/codeAndCoffee.webp"
+                width="360"
+                height="261"
+                class="img-responsive lazyload"
+                alt="Infographic made by organizers about Mandys talk"
+              />
+            </a>
+          </div>
           <div class="col-sm-4 portfolio-item">
             <a
               href="#portfolioModal33"
@@ -999,6 +1033,66 @@
     </footer>
 
     <!-- Portfolio Modals -->
+    <div
+      class="portfolio-modal modal fade"
+      id="portfolioModal34"
+      tabindex="-1"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="modal-content">
+        <div class="close-modal" data-dismiss="modal">
+          <div class="lr">
+            <div class="rl"></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+              <div class="modal-body">
+                <h2>Code && Coffee NYC Meetup!</h2>
+                <hr class="star-primary" />
+                <img
+                  data-src="https://ik.imagekit.io/mandymeindersma/portfolio/codeAndCoffee.webp"
+                  class="img-responsive img-centered lazyload"
+                  alt="Infographic made by organizers about Mandys talk"
+                />
+                <p>
+                  Code && Coffee was the first New York City Tech Meetup I went
+                  to when I first moved. It feels so cool to be able to
+                  <a
+                    href="https://www.meetup.com/new-york-code-coffee/events/313123821/"
+                    target="_blank"
+                    >speak at one of their events</a
+                  >!
+                </p>
+                <ul class="list-inline item-details">
+                  <li>
+                    <b
+                      >Did I finally get my real eras tour bracelet to light
+                      up?</b
+                    >
+                    Yes
+                  </li>
+                  <li>
+                    <b>Did I convert people into swifties during the talk?</b>
+                    Also yes!
+                  </li>
+                </ul>
+                <br />
+                <button
+                  type="button"
+                  class="btn btn-default"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <div
       class="portfolio-modal modal fade"
       id="portfolioModal33"

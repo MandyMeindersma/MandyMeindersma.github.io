@@ -16,6 +16,7 @@ const NewYorkBreakThroughTechPrep = [40.756137166524, -73.956088029759];
 const NewYorkTechFutures = [40.706548234777, -74.003252579832];
 const NewYorkPeopleInc = [40.711571, -74.015342];
 const NewYorkWorldTraceCenter = [40.712755872269, -74.01329720114];
+const NewYorkCodeAndCoffee = [40.743154771972, -73.941901490997];
 const MontrealCANCWIC = [45.4980116, -73.5714769];
 const HalifaxCANCWIC = [44.646589311141, -63.574683192919];
 const NewOrleansAAAI = [29.9475306, -90.0635043];
@@ -51,24 +52,24 @@ const EdmontonAmiiKickstartMarker = L.marker(EdmontonAmiiKickstart, {
   .addTo(map)
   .bindPopup(
     stylePopup(
-      '<a href="https://www.amii.ca/" target="_blank">Alberta Machine Intelligence Institute</a> panel on my industry experience'
-    )
+      '<a href="https://www.amii.ca/" target="_blank">Alberta Machine Intelligence Institute</a> panel on my industry experience',
+    ),
   );
 
 const EdmontonGDGIWDMarker = L.marker(EdmontonGDGIWD, { icon: micIcon })
   .addTo(map)
   .bindPopup(
     stylePopup(
-      '<a href="https://gdg.community.dev/events/details/google-gdg-cloud-edmonton-presents-edmonton-iwd-dare-to-be/" target="_blank">Google Developer Group</a> on how to make a tech resume'
-    )
+      '<a href="https://gdg.community.dev/events/details/google-gdg-cloud-edmonton-presents-edmonton-iwd-dare-to-be/" target="_blank">Google Developer Group</a> on how to make a tech resume',
+    ),
   );
 
 const EdmontonAdasTeamMarker = L.marker(EdmontonAdasTeam, { icon: micIcon })
   .addTo(map)
   .bindPopup(
     stylePopup(
-      '<a href="https://adasteam.ca/" target="_blank">Adas Team</a> workshop on what type of dev students want to be'
-    )
+      '<a href="https://adasteam.ca/" target="_blank">Adas Team</a> workshop on what type of dev students want to be',
+    ),
   );
 
 const EdmontonAdasTeamResumeMarker = L.marker(EdmontonAdasTeamResume, {
@@ -77,24 +78,24 @@ const EdmontonAdasTeamResumeMarker = L.marker(EdmontonAdasTeamResume, {
   .addTo(map)
   .bindPopup(
     stylePopup(
-      '<a href="https://adasteam.ca/" target="_blank">Adas Team</a> workshop on technical resumes'
-    )
+      '<a href="https://adasteam.ca/" target="_blank">Adas Team</a> workshop on technical resumes',
+    ),
   );
 
 const EdmontonHardwareMarker = L.marker(EdmontonHardware, { icon: micIcon })
   .addTo(map)
   .bindPopup(
     stylePopup(
-      "Hardware Meetup on my project to connect a rotary phone to my cell phone"
-    )
+      "Hardware Meetup on my project to connect a rotary phone to my cell phone",
+    ),
   );
 
 const EdmontonAmiiMarker = L.marker(EdmontonAmii, { icon: micIcon })
   .addTo(map)
   .bindPopup(
     stylePopup(
-      '<a href="https://site.pheedloop.com/event/TechAid2023/speakers" target="_blank">Alberta Machine Intelligence Institute Conference</a> on Open Source'
-    )
+      '<a href="https://site.pheedloop.com/event/TechAid2023/speakers" target="_blank">Alberta Machine Intelligence Institute Conference</a> on Open Source',
+    ),
   );
 
 const NewYorkCunyTechPrepMarker = L.marker(NewYorkCunyTechPrep, {
@@ -103,8 +104,8 @@ const NewYorkCunyTechPrepMarker = L.marker(NewYorkCunyTechPrep, {
   .addTo(map)
   .bindPopup(
     stylePopup(
-      '<a href="https://cunytechprep.org/" target="_blank">City University of New York Tech Prep</a> on Open Source'
-    )
+      '<a href="https://cunytechprep.org/" target="_blank">City University of New York Tech Prep</a> on Open Source',
+    ),
   );
 
 const NewYorkCunyTechPrepAmazonMarker = L.marker(NewYorkCunyTechPrepAmazon, {
@@ -113,35 +114,35 @@ const NewYorkCunyTechPrepAmazonMarker = L.marker(NewYorkCunyTechPrepAmazon, {
   .addTo(map)
   .bindPopup(
     stylePopup(
-      '<a href="https://cunytechprep.org/" target="_blank">City University of New York Tech Prep</a> on Types of Developers'
-    )
+      '<a href="https://cunytechprep.org/" target="_blank">City University of New York Tech Prep</a> on Types of Developers',
+    ),
   );
 
 const NewYorkBreakThroughTechPrepMarker = L.marker(
   NewYorkBreakThroughTechPrep,
-  { icon: micIcon }
+  { icon: micIcon },
 )
   .addTo(map)
   .bindPopup(
     stylePopup(
-      '<a href="https://www.breakthroughtech.org/" target="_blank">Break Through Tech Prep</a> on Nailing a Technical Interview'
-    )
+      '<a href="https://www.breakthroughtech.org/" target="_blank">Break Through Tech Prep</a> on Nailing a Technical Interview',
+    ),
   );
 
 const NewYorkTechFuturesMarker = L.marker(NewYorkTechFutures, { icon: micIcon })
   .addTo(map)
   .bindPopup(
     stylePopup(
-      '<a href="https://events.techfutures.com/2025/agenda/session/1733721" target="_blank">Tech Futures</a> on Engineering High-Density IoT'
-    )
+      '<a href="https://events.techfutures.com/2025/agenda/session/1733721" target="_blank">Tech Futures</a> on Engineering High-Density IoT',
+    ),
   );
 
 const NewYorkPeopleIncMarker = L.marker(NewYorkPeopleInc, { icon: micIcon })
   .addTo(map)
   .bindPopup(
     stylePopup(
-      '<a href="https://www.meetup.com/peopleinc/events/310731650" target="_blank">People Inc.</a> on Java 25'
-    )
+      '<a href="https://www.meetup.com/peopleinc/events/310731650" target="_blank">People Inc.</a> on Java 25',
+    ),
   );
 
 const NewYorkWorldTradeCenterMarker = L.marker(NewYorkWorldTraceCenter, {
@@ -150,70 +151,80 @@ const NewYorkWorldTradeCenterMarker = L.marker(NewYorkWorldTraceCenter, {
   .addTo(map)
   .bindPopup(
     stylePopup(
-      '<a href="https://www.eventbrite.com/e/tinker-talk-breadboarding-human-robot-interaction-talk-networking-tickets-1486262564339" target="_blank">Robotics Workshop</a> on Breadboarding'
-    )
+      '<a href="https://www.eventbrite.com/e/tinker-talk-breadboarding-human-robot-interaction-talk-networking-tickets-1486262564339" target="_blank">Robotics Workshop</a> on Breadboarding',
+    ),
+  );
+
+const NewYorkCodeAndCoffeeMarker = L.marker(NewYorkCodeAndCoffee, {
+  icon: micIcon,
+})
+  .addTo(map)
+  .bindPopup(
+    stylePopup(
+      '<a href="https://www.meetup.com/new-york-code-coffee/events/313123821/" target="_blank">IoT session</a> on Taylor Swift',
+    ),
   );
 
 const MontrealCANCWICMarker = L.marker(MontrealCANCWIC, { icon: micIcon })
   .addTo(map)
   .bindPopup(
     stylePopup(
-      '<a href="https://cscan-infocan.ca/celebration-of-women-in-computing/" target="_blank">Canadian Celebration of Women in Computing</a> on my research on Cardiac Imaging Software'
-    )
+      '<a href="https://cscan-infocan.ca/celebration-of-women-in-computing/" target="_blank">Canadian Celebration of Women in Computing</a> on my research on Cardiac Imaging Software',
+    ),
   );
 
 const HalifaxCANCWICMarker = L.marker(HalifaxCANCWIC, { icon: micIcon })
   .addTo(map)
   .bindPopup(
     stylePopup(
-      '<a href="https://cscan-infocan.ca/celebration-of-women-in-computing/" target="_blank">Canadian Celebration of Women in Computing</a> on my internship experience at Intuit'
-    )
+      '<a href="https://cscan-infocan.ca/celebration-of-women-in-computing/" target="_blank">Canadian Celebration of Women in Computing</a> on my internship experience at Intuit',
+    ),
   );
 
 const NewOrleansAAAIMarker = L.marker(NewOrleansAAAI, { icon: micIcon })
   .addTo(map)
   .bindPopup(
     stylePopup(
-      '<a href="https://aaai.org/" target="_blank">Association for the Advancement of Artificial Intelligence</a> on making friendly robots for children on the autism spectrum'
-    )
+      '<a href="https://aaai.org/" target="_blank">Association for the Advancement of Artificial Intelligence</a> on making friendly robots for children on the autism spectrum',
+    ),
   );
 
 const WaterlooEquithonMarker = L.marker(WaterlooEquithon, { icon: micIcon })
   .addTo(map)
   .bindPopup(
     stylePopup(
-      '<a href="https://equithon2018.devpost.com/" target="_blank">Equithon Hackathon</a> on my winning chat bot project'
-    )
+      '<a href="https://equithon2018.devpost.com/" target="_blank">Equithon Hackathon</a> on my winning chat bot project',
+    ),
   );
 
 const LakeLouiseNEWMarker = L.marker(LakeLouiseNEW, { icon: micIcon })
   .addTo(map)
   .bindPopup(
     stylePopup(
-      '<a href="https://www.networkofempoweredwomen.ca/" target="_blank">Network of Empowered Women</a> on my winning case study'
-    )
+      '<a href="https://www.networkofempoweredwomen.ca/" target="_blank">Network of Empowered Women</a> on my winning case study',
+    ),
   );
 
 const HawaiiAAAIMarker = L.marker(HawaiiAAAI, { icon: micIcon })
   .addTo(map)
   .bindPopup(
     stylePopup(
-      '<a href="https://aaai.org/" target="_blank">Association for the Advancement of Artificial Intelligence</a> on Robotics'
-    )
+      '<a href="https://aaai.org/" target="_blank">Association for the Advancement of Artificial Intelligence</a> on Robotics',
+    ),
   );
 
 const ChicagoGHCMarker = L.marker(ChicagoGHC, { icon: micIcon })
   .addTo(map)
   .bindPopup(
     stylePopup(
-      '<a href="https://ghc.anitab.org/session-catalog?tab.eventday=1759115846891001vg9z&search=mandy%20helen%20jasmine#/session/1745708608934001RG5C" target="_blank">GHC</a> on Types of Developers Workshop'
-    )
+      '<a href="https://ghc.anitab.org/session-catalog?tab.eventday=1759115846891001vg9z&search=mandy%20helen%20jasmine#/session/1745708608934001RG5C" target="_blank">GHC</a> on Types of Developers Workshop',
+    ),
   );
 
 const PoconosTechBashMarker = L.marker(PoconosTechBash, { icon: micIcon })
   .addTo(map)
   .bindPopup(
     stylePopup(
-      '<a href="https://techbash.com/sessions2025" target="_blank">Tech Bash</a> on IoT of Taylor Swift concerts'
-    )
+      '<a href="https://techbash.com/sessions2025" target="_blank">Tech Bash</a> on IoT of Taylor Swift concerts',
+    ),
   );
