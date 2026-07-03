@@ -2,7 +2,7 @@
   console.log("[modal-nav] IIFE started");
   // inject minimal styles for nav buttons
   var css = `
-  .modal-nav{position:fixed;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.7);color:#fff;border:none;width:50px;height:80px;font-size:36px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:4px;z-index:10000;padding:0}
+  .modal-nav{position:fixed;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.4);color:#fff;border:none;width:50px;height:80px;font-size:36px;line-height:1;display:flex;align-items:center;justify-content:center;cursor:pointer;border-radius:4px;z-index:10000;padding:0}
   .modal-nav:hover{background:rgba(0,0,0,0.9)}
   .modal-nav:focus{outline:2px solid #fff}
   .modal-prev{left:20px}
@@ -19,6 +19,7 @@
   });
   console.log("[modal-nav] found modals:", ids.length, ids);
   var currentId = null;
+  var isNavigating = false;
 
   // create global nav buttons appended to body to avoid modal stacking issues
   var globalPrev = document.createElement("button");
@@ -52,18 +53,50 @@
     var next = (idx + dir + ids.length) % ids.length;
     var nextId = ids[next];
     console.log("[modal-nav] navigating from", currentId, "to", nextId);
+    if (nextId === currentId) return;
+
     try {
-      // hide current then show next
-      $("#" + currentId).modal("hide");
-      $("#" + nextId).modal("show");
+      var $current = $("#" + currentId);
+      var $next = $("#" + nextId);
+      if (
+        $current.length &&
+        $next.length &&
+        typeof $current.modal === "function"
+      ) {
+        isNavigating = true;
+
+        if ($current.hasClass("fade")) {
+          $current.data("nav-had-fade", true).removeClass("fade");
+        }
+        if ($next.hasClass("fade")) {
+          $next.data("nav-had-fade", true).removeClass("fade");
+        }
+
+        $current.one("hidden.bs.modal", function () {
+          if ($(this).data("nav-had-fade")) {
+            $(this).addClass("fade").removeData("nav-had-fade");
+          }
+          $next.modal("show");
+        });
+
+        $next.one("shown.bs.modal", function () {
+          if ($(this).data("nav-had-fade")) {
+            $(this).addClass("fade").removeData("nav-had-fade");
+          }
+        });
+
+        $current.modal("hide");
+        return;
+      }
     } catch (e) {
       console.error("[modal-nav] jQuery modal error:", e);
-      // fallback if jQuery/Bootstrap not present
-      var cur = document.getElementById(currentId);
-      var nxt = document.getElementById(nextId);
-      if (cur) cur.classList.remove("in");
-      if (nxt) nxt.classList.add("in");
     }
+
+    // fallback if jQuery/Bootstrap not present or if show/hide fails
+    var cur = document.getElementById(currentId);
+    var nxt = document.getElementById(nextId);
+    if (cur) cur.classList.remove("in");
+    if (nxt) nxt.classList.add("in");
   }
 
   modals.forEach(function (modal, idx) {
@@ -91,6 +124,7 @@
       console.log("[modal-nav] attaching handlers to modal", idx, modal.id);
       jQuery(modal).on("shown.bs.modal", function () {
         currentId = this.id;
+        isNavigating = false;
         console.log("[modal-nav] shown.bs.modal event:", currentId);
         // show global buttons
         globalPrev.style.display = "flex";
@@ -100,7 +134,7 @@
         console.log("[modal-nav] hidden.bs.modal event:", this.id);
         var stillOpen = jQuery(".portfolio-modal.in").length > 0;
         console.log("[modal-nav] hidden.bs.modal, stillOpen=", stillOpen);
-        if (!stillOpen) {
+        if (!stillOpen && !isNavigating) {
           if (currentId === this.id) currentId = null;
           globalPrev.style.display = "none";
           globalNext.style.display = "none";
@@ -118,11 +152,13 @@
   jQuery(document).on("show.bs.modal", ".portfolio-modal", function () {
     console.log("[modal-nav] DOCUMENT show.bs.modal event:", this.id);
     currentId = this.id;
+    isNavigating = false;
     globalPrev.style.display = "flex";
     globalNext.style.display = "flex";
   });
   jQuery(document).on("shown.bs.modal", ".portfolio-modal", function () {
     currentId = this.id;
+    isNavigating = false;
     console.log("[modal-nav] DOCUMENT shown.bs.modal event:", currentId);
     globalPrev.style.display = "flex";
     globalNext.style.display = "flex";
@@ -134,7 +170,7 @@
     console.log("[modal-nav] DOCUMENT hidden.bs.modal event:", this.id);
     var stillOpen = jQuery(".portfolio-modal.in").length > 0;
     console.log("[modal-nav] DOCUMENT hidden.bs.modal, stillOpen=", stillOpen);
-    if (!stillOpen) {
+    if (!stillOpen && !isNavigating) {
       if (currentId === this.id) currentId = null;
       globalPrev.style.display = "none";
       globalNext.style.display = "none";
