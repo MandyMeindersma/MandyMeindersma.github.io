@@ -43,7 +43,7 @@ span a:hover {
 
 .small-svg:hover {
   /*change it back to purple hahaha */
-  filter: invert(72%) sepia(100%) saturate(1452%) hue-rotate(230deg)
+  filter: invert(72%) sepia(10%) saturate(1452%) hue-rotate(260deg)
     brightness(85%) contrast(119%);
 }
 
