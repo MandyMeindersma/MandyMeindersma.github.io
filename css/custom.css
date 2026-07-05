@@ -1,5 +1,6 @@
 /* custom css */
 #about a,
+#videos a,
 .footer-above a,
 span a {
   text-decoration: underline;
@@ -16,6 +17,7 @@ p a:hover {
 }
 
 #about a:hover,
+#videos a:hover,
 .footer-above a:hover,
 span a:hover {
   text-decoration: underline;
