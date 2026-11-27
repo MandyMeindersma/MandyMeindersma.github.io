@@ -26,7 +26,7 @@ const ChicagoGHC = [41.8512033, -87.6177675];
 const PoconosTechBash = [41.1039404, -75.3836049];
 
 L.tileLayer(
-  "https://basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=__CARTO_API_KEY_PROD__",
+  "https://basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=__CARTO_API_KEY_PROD__", // remember there is a local key I can use on the carto dashboard
   {
     attribution:
       '&copy; <a href="https://carto.com/basemaps">CartoDB</a> + <a href="https://www.freepik.com/icons/microphone">Freepik</a>',

@@ -2,7 +2,11 @@
 #about a,
 #videos a,
 .footer-above a,
-span a {
+span a,
+#about a:visited,
+#videos a:visited,
+.footer-above a:visited,
+span a:visited {
   text-decoration: underline;
   color: white;
 }
