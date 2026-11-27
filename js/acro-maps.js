@@ -7,10 +7,13 @@ const SoHoPlayHouseFreakShow = [40.726421, -74.004382];
 const PigeonImpersonationPageant = [40.7521983, -74.0010911];
 const NightVarietyShow = [40.708214054214, -74.013778741478];
 
-L.tileLayer("https://basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-  attribution:
-    '&copy; <a href="https://carto.com/basemaps">CartoDB</a> + <a href="https://www.freepik.com/icons/microphone">Freepik</a>',
-}).addTo(map);
+L.tileLayer(
+  "https://basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png?key=__CARTO_API_KEY_PROD__",
+  {
+    attribution:
+      '&copy; <a href="https://carto.com/basemaps">CartoDB</a> + <a href="https://www.freepik.com/icons/microphone">Freepik</a>',
+  },
+).addTo(map);
 
 // other styles of maps I could choose:
 // https://basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png
